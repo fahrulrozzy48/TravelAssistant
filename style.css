@@ -1,0 +1,170 @@
+
+    
+body {
+    background-image: url(img/timelapse-photography-of-cars-in-tunnel-1253049.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.95;
+    
+    
+    
+}
+
+#botui-app{
+    position: fixed;
+    display: flex;
+    top: 0%;
+    right: 0px;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.judul h2{
+    color: white;
+    font-size: 60px;
+    margin: 150px 80px 0 80px;
+}
+.judul p{
+    color: white;
+    font-size: 20px;
+    margin: 0px 80px;
+}
+
+
+
+
+
+
+.botui-container {
+    font-size: 12px;
+    background-color: black;
+    font-family: font-family;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+}
+
+.botui-app-container {
+    float: right;
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    
+}
+
+
+@media screen and (max-width: 320px) {
+    .botui-container {
+        font-size: 10px;
+        background-color: black;
+        font-family: font-family;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+    }
+    .botui-app-container {
+        float: right;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        
+    }
+  }
+
+.botui-container{
+background-color:black;
+}
+.botui-messages-container {
+    padding: 6px 6px;
+}
+
+.botui-actions-container {
+    padding: 6px 6px;
+}
+
+.botui-message {
+    min-height: 10px;
+}
+
+.botui-message-content {
+    padding: 5px 15px;
+    border-radius: 15px;
+    color: darken(primary-color, 22%);
+    background-color: lighten(primary-color, 35%);
+
+}
+
+.botui-message-content-link {
+    color: primary-color;
+}
+
+.botui-actions-text-input {
+    border: 0;
+    outline: none;
+    border-radius: 0;
+    padding: 5px 7px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: transparent;
+    color: white;
+    border-bottom: 1px solid #fff;
+
+    
+}
+
+
+.botui-actions-buttons-button {
+    border: 0;
+    color: white;
+    line-height: 1;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 7px 15px;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+    background: green;
+    box-shadow: 2px 3px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+
+.slide-fade-enter-active {
+    transition: all 0.3s ease;
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+
+.dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+    background-color: primary-color;
+    
+}
+
+@keyframes loading {
+    0% {
+        transform: translate(0, 0);
+        background-color: lighten(primary-color, 10%);
+    }
+
+    25% {
+        transform: translate(0, -3px);
+    }
+    50% {
+        transform: translate(0, 0px);
+        background-color: lighten(primary-color, 10%);
+    }
+    75% {
+        transform: translate(0, 3px);
+    }
+    100% {
+        transform: translate(0, 0px);
+    }
+}
+
