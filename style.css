@@ -4,7 +4,10 @@ body {
     background-image: url(img/timelapse-photography-of-cars-in-tunnel-1253049.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     opacity: 0.95;
+    width: 100%;
+    height: 100%;
     
     
     
@@ -54,6 +57,54 @@ body {
 }
 
 
+@media screen and (max-width: 768px) {
+    .botui-container {
+        font-size: 10px;
+        background-color: black;
+        font-family: font-family;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+    }
+    .botui-app-container {
+        float: right;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        
+    }
+  } 
+@media screen and (max-width: 425px) {
+    .botui-container {
+        font-size: 10px;
+        background-color: black;
+        font-family: font-family;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+    }
+    .botui-app-container {
+        float: right;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        
+    }
+  }
+@media screen and (max-width: 375px) {
+    .botui-container {
+        font-size: 10px;
+        background-color: black;
+        font-family: font-family;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+    }
+    .botui-app-container {
+        float: right;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        
+    }
+  }
 @media screen and (max-width: 320px) {
     .botui-container {
         font-size: 10px;

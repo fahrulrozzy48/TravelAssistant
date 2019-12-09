@@ -17,478 +17,481 @@
     <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/botui/build/botui.js"></script>
 
-    <div class="judul">
-        <h2><b>Travel Assistant </b></h2> <br>
-        <p>Aplikasi penuntun jalan-jalan kemana saja <br>
-            dengan menggunakan angkutan umum atau bis kota. <br> <br>
-            Happy Weekend :)</p>
+    <div id="Halaman">
+
+        <div class="judul">
+            <h2><b>Travel Assistant </b></h2> <br>
+            <p>Aplikasi penuntun jalan-jalan kemana saja <br>
+                dengan menggunakan angkutan umum atau bis kota. <br> <br>
+                Happy Weekend :)</p>
+        </div>
+
+        <div class="botui-app-container" id="botui-app">
+
+            <bot-ui></bot-ui>
+
+
+
+
+            <script>
+                const chitchat = {
+                    loadingIndex: null,
+
+                    input: {},
+
+                    init: function () {
+                        this.botui = new BotUI('botui-app');
+
+                        this.start();
+
+
+                    },
+                    //----------Step by step Perjalanan Cibiru -------------------//
+                    biscibiru: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cibiru ke Alun-alun Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Carilah Halte depan UIN SGD BANDUNG. Tunggulah Bis DAMRI dengan jurusan Alun-alun. Naik bis dan duduklah sampai tiba di tempat tujuan (Perkiraan Waktu 40 menit). Biaya : Rp. 6000. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+                    //-------------- Cibiru Kategori ----------------------------//
+                    cibiru: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Mau naik apa anda hari ini?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Bis Kota',
+                                            value: 'biscibiru'
+                                        },
+                                        {
+                                            text: 'Angkutan Umum',
+                                            value: 'angkotcibiru'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'biscibiru':
+                                                this.biscibiru();
+                                                break;
+                                            case 'angkotcibiru':
+                                                this.angkotcibiru();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+                    //---------- alun - alun kategori -----------------------//
+                    alunbandung: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Dimana sekarang anda berada?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Cibiru',
+                                            value: 'cibiru'
+                                        },
+                                        {
+                                            text: 'Cicaheum',
+                                            value: 'cicaheum'
+
+                                        },
+                                        {
+                                            text: 'Dago',
+                                            value: 'dago'
+
+                                        },
+                                        {
+                                            text: 'Cimahi',
+                                            value: 'cimahi'
+
+                                        },
+                                        {
+                                            text: 'Buah Batu',
+                                            value: 'buahbatu'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'cibiru':
+                                                this.cibiru();
+                                                break;
+                                            case 'cicaheum':
+                                                this.cicaheum();
+                                                break;
+                                            case 'dago':
+                                                this.dago();
+                                                break;
+                                            case 'cimahi':
+                                                this.cimahi();
+                                                break;
+                                            case 'buahbatu':
+                                                this.buahbatu();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+                    //  Kategori -----------------------------------------------------------------// 
+                    nonton: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Arek nonton jeng saha? jomblo mah mending lobakeun ngaca.'
+
+                        })
+
+
+
+                    },
+                    hiburan: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Inilah 5 tempat yang sering dikunjungi oleh masyarakat Bandung. Silahkan pilih'
+
+                        })
+
+
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Alun-alun Kota Bandung',
+                                            value: 'alunbandung'
+                                        },
+                                        {
+                                            text: 'Gedung Sate',
+                                            value: 'gedungsate'
+
+                                        },
+                                        {
+                                            text: 'Farm House Lembang',
+                                            value: 'farmhouse'
+
+                                        },
+                                        {
+                                            text: 'Ciwalk',
+                                            value: 'ciwalk'
+
+                                        },
+                                        {
+                                            text: 'Bandung Zoo',
+                                            value: 'bandungzoo'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'alunbandung':
+                                                this.alunbandung();
+                                                break;
+                                            case 'gedungsate':
+                                                this.gedungsate();
+                                                break;
+                                            case 'farmhouse':
+                                                this.farmhouse();
+                                                break;
+                                            case 'ciwalk':
+                                                this.ciwalk();
+                                                break;
+                                            case 'bandungzoo':
+                                                this.bandungzoo();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+                    },
+                    sekolah: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Jeung naon sakola? DPR geus aya. <br> Gawe weh terus, beunghar henteu!! <br> Mending mulung'
+                        })
+
+
+
+                    },
+                    wisata: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Wisata? boga duit ti mana maneh? <br> Maen Mobel lejen oge menta hotspot ka batur'
+                        })
+
+
+
+                    },
+                    kuliner: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Rek dahar naon maneh? <br> Sangu jeng kecap ge geus alhamdulillah'
+                        })
+
+
+
+                    },
+                    olahraga: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Olahraga kamana? mandi oge tara maneh mah'
+                        })
+
+
+
+                    },
+
+
+
+
+
+
+                    //--------------Home Chat Bot -------------------------------------------//
+
+                    start: function () {
+                        this.botui.message.bot({
+                            delay: 1000,
+                            loading: true,
+                            content: 'Hai Saya adalah Travel Assistant.'
+                        })
+
+                            .then(() => {
+                                return this.botui.message.bot({
+                                    delay: 1000,
+                                    content: 'Siapa nama kamu?'
+                                });
+                            })
+
+                            .then(() => {
+                                return this.botui.action.text({
+                                    delay: 400,
+                                    action: {
+                                        size: 18,
+                                        sub_type: 'text',
+                                        placeholder: 'Masukan Nama'
+                                    }
+                                });
+                            })
+
+                            .then(res => {
+                                this.input.name = res.value;
+                                this.botui.message.add({
+
+                                    content: 'Hai ' + this.input.name
+                                });
+                            })
+
+                            .then(() => {
+                                return this.botui.message.bot({
+                                    delay: 1000,
+                                    loading: true,
+                                    content: 'Pilih apa yang kamu inginkan.'
+                                });
+                            })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Hiburan',
+                                            value: 'hiburan'
+                                        },
+                                        {
+                                            text: 'Nonton',
+                                            value: 'nonton'
+
+                                        },
+                                        {
+                                            text: 'Sekolah/Kuliah',
+                                            value: 'sekolah'
+
+                                        },
+                                        {
+                                            text: 'Wisata',
+                                            value: 'wisata'
+
+                                        },
+                                        {
+                                            text: 'Olahraga',
+                                            value: 'olahraga'
+
+                                        },
+                                        {
+                                            text: 'Kuliner',
+                                            value: 'kuliner'
+                                        },
+                                    ]
+
+                                });
+                            })
+
+
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+
+
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'hiburan':
+                                                this.hiburan();
+                                                break;
+                                            case 'nonton':
+                                                this.nonton();
+                                                break;
+                                            case 'sekolah':
+                                                this.sekolah();
+                                                break;
+                                            case 'wisata':
+                                                this.wisata();
+                                                break;
+                                            case 'olahraga':
+                                                this.olahraga();
+                                                break;
+                                            case 'kuliner':
+                                                this.kuliner();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+
+
+
+                            });
+
+
+
+                    }
+                };
+
+
+                chitchat.init();
+
+
+
+
+            </script>
+
+
+        </div>
     </div>
-
-    <div class="botui-app-container" id="botui-app">
-
-        <bot-ui></bot-ui>
-
-
-
-
-        <script>
-            const chitchat = {
-                loadingIndex: null,
-
-                input: {},
-
-                init: function () {
-                    this.botui = new BotUI('botui-app');
-
-                    this.start();
-
-
-                },
-                //----------Step by step Perjalanan Cibiru -------------------//
-                biscibiru: function () {
-
-                    this.botui.message.add({
-                        delay: 200,
-                        loading: true,
-                        content: 'Ini adalah step-by-step naik bis dari Cibiru ke Alun-alun Kota Bandung.'
-
-                    })
-                    this.botui.message.add({
-                        delay: 200,
-                        loading: true,
-                        content: 'Carilah Halte depan UIN SGD BANDUNG. Tunggulah Bis DAMRI dengan jurusan Alun-alun. Naik bis dan duduklah sampai tiba di tempat tujuan (Perkiraan Waktu 40 menit). Biaya : Rp. 6000. '
-
-                    })
-                    this.botui.message.add({
-                        delay: 200,
-                        loading: true,
-                        content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
-
-                    })
-
-
-                },
-                //-------------- Cibiru Kategori ----------------------------//
-                cibiru: function () {
-
-                    this.botui.message.add({
-                        delay: 200,
-                        loading: true,
-                        content: 'Mau naik apa anda hari ini?'
-
-                    })
-
-                        .then(() => {
-                            return this.botui.action.button({
-
-                                delay: 1000,
-                                action: [
-                                    {
-                                        text: 'Bis Kota',
-                                        value: 'biscibiru'
-                                    },
-                                    {
-                                        text: 'Angkutan Umum',
-                                        value: 'angkotcibiru'
-
-                                    },
-                                ]
-
-                            });
-                        })
-
-                        .then(res => {
-                            this.botui.message
-                                .bot({
-                                    delay: 200,
-                                    loading: true
-                                })
-
-                                .then(index => {
-                                    this.loadingIndex = index;
-
-                                    switch (res.value) {
-                                        case 'biscibiru':
-                                            this.biscibiru();
-                                            break;
-                                        case 'angkotcibiru':
-                                            this.angkotcibiru();
-                                            break;
-
-                                        default:
-
-                                    }
-                                });
-
-                        });
-
-
-
-
-                },
-
-                //---------- alun - alun kategori -----------------------//
-                alunbandung: function () {
-
-                    this.botui.message.add({
-                        delay: 200,
-                        loading: true,
-                        content: 'Dimana sekarang anda berada?'
-
-                    })
-
-                        .then(() => {
-                            return this.botui.action.button({
-
-                                delay: 1000,
-                                action: [
-                                    {
-                                        text: 'Cibiru',
-                                        value: 'cibiru'
-                                    },
-                                    {
-                                        text: 'Cicaheum',
-                                        value: 'cicaheum'
-
-                                    },
-                                    {
-                                        text: 'Dago',
-                                        value: 'dago'
-
-                                    },
-                                    {
-                                        text: 'Cimahi',
-                                        value: 'cimahi'
-
-                                    },
-                                    {
-                                        text: 'Buah Batu',
-                                        value: 'buahbatu'
-
-                                    },
-                                ]
-
-                            });
-                        })
-
-                        .then(res => {
-                            this.botui.message
-                                .bot({
-                                    delay: 200,
-                                    loading: true
-                                })
-
-                                .then(index => {
-                                    this.loadingIndex = index;
-
-                                    switch (res.value) {
-                                        case 'cibiru':
-                                            this.cibiru();
-                                            break;
-                                        case 'cicaheum':
-                                            this.cicaheum();
-                                            break;
-                                        case 'dago':
-                                            this.dago();
-                                            break;
-                                        case 'cimahi':
-                                            this.cimahi();
-                                            break;
-                                        case 'buahbatu':
-                                            this.buahbatu();
-                                            break;
-
-                                        default:
-
-                                    }
-                                });
-
-                        });
-
-
-
-
-                },
-
-                //  Kategori -----------------------------------------------------------------// 
-                nonton: function () {
-                    this.botui.message.add({
-                        delay: 200,
-                        loading: true,
-                        content: 'Arek nonton jeng saha? jomblo mah mending lobakeun ngaca.'
-
-                    })
-
-
-
-                },
-                hiburan: function () {
-
-                    this.botui.message.add({
-                        delay: 200,
-                        loading: true,
-                        content: 'Inilah 5 tempat yang sering dikunjungi oleh masyarakat Bandung. Silahkan pilih'
-
-                    })
-
-
-
-                        .then(() => {
-                            return this.botui.action.button({
-
-                                delay: 1000,
-                                action: [
-                                    {
-                                        text: 'Alun-alun Kota Bandung',
-                                        value: 'alunbandung'
-                                    },
-                                    {
-                                        text: 'Gedung Sate',
-                                        value: 'gedungsate'
-
-                                    },
-                                    {
-                                        text: 'Farm House Lembang',
-                                        value: 'farmhouse'
-
-                                    },
-                                    {
-                                        text: 'Ciwalk',
-                                        value: 'ciwalk'
-
-                                    },
-                                    {
-                                        text: 'Bandung Zoo',
-                                        value: 'bandungzoo'
-
-                                    },
-                                ]
-
-                            });
-                        })
-
-                        .then(res => {
-                            this.botui.message
-                                .bot({
-                                    delay: 200,
-                                    loading: true
-                                })
-
-                                .then(index => {
-                                    this.loadingIndex = index;
-
-                                    switch (res.value) {
-                                        case 'alunbandung':
-                                            this.alunbandung();
-                                            break;
-                                        case 'gedungsate':
-                                            this.gedungsate();
-                                            break;
-                                        case 'farmhouse':
-                                            this.farmhouse();
-                                            break;
-                                        case 'ciwalk':
-                                            this.ciwalk();
-                                            break;
-                                        case 'bandungzoo':
-                                            this.bandungzoo();
-                                            break;
-
-                                        default:
-
-                                    }
-                                });
-
-                        });
-
-                },
-                sekolah: function () {
-                    this.botui.message.add({
-                        delay: 200,
-                        loading: true,
-                        content: 'Jeung naon sakola? DPR geus aya. <br> Gawe weh terus, beunghar henteu!! <br> Mending mulung'
-                    })
-
-
-
-                },
-                wisata: function () {
-                    this.botui.message.add({
-                        delay: 200,
-                        loading: true,
-                        content: 'Wisata? boga duit ti mana maneh? <br> Maen Mobel lejen oge menta hotspot ka batur'
-                    })
-
-
-
-                },
-                kuliner: function () {
-                    this.botui.message.add({
-                        delay: 200,
-                        loading: true,
-                        content: 'Rek dahar naon maneh? <br> Sangu jeng kecap ge geus alhamdulillah'
-                    })
-
-
-
-                },
-                olahraga: function () {
-                    this.botui.message.add({
-                        delay: 200,
-                        loading: true,
-                        content: 'Olahraga kamana? mandi oge tara maneh mah'
-                    })
-
-
-
-                },
-
-
-
-
-
-
-                //--------------Home Chat Bot -------------------------------------------//
-
-                start: function () {
-                    this.botui.message.bot({
-                        delay: 1000,
-                        loading: true,
-                        content: 'Hai Saya adalah Travel Assistant.'
-                    })
-
-                        .then(() => {
-                            return this.botui.message.bot({
-                                delay: 1000,
-                                content: 'Siapa nama kamu?'
-                            });
-                        })
-
-                        .then(() => {
-                            return this.botui.action.text({
-                                delay: 400,
-                                action: {
-                                    size: 18,
-                                    sub_type: 'text',
-                                    placeholder: 'Masukan Nama'
-                                }
-                            });
-                        })
-
-                        .then(res => {
-                            this.input.name = res.value;
-                            this.botui.message.add({
-
-                                content: 'Hai ' + this.input.name
-                            });
-                        })
-
-                        .then(() => {
-                            return this.botui.message.bot({
-                                delay: 1000,
-                                loading: true,
-                                content: 'Pilih apa yang kamu inginkan.'
-                            });
-                        })
-
-                        .then(() => {
-                            return this.botui.action.button({
-
-                                delay: 1000,
-                                action: [
-                                    {
-                                        text: 'Hiburan',
-                                        value: 'hiburan'
-                                    },
-                                    {
-                                        text: 'Nonton',
-                                        value: 'nonton'
-
-                                    },
-                                    {
-                                        text: 'Sekolah/Kuliah',
-                                        value: 'sekolah'
-
-                                    },
-                                    {
-                                        text: 'Wisata',
-                                        value: 'wisata'
-
-                                    },
-                                    {
-                                        text: 'Olahraga',
-                                        value: 'olahraga'
-
-                                    },
-                                    {
-                                        text: 'Kuliner',
-                                        value: 'kuliner'
-                                    },
-                                ]
-
-                            });
-                        })
-
-
-
-                        .then(res => {
-                            this.botui.message
-                                .bot({
-                                    delay: 200,
-                                    loading: true
-                                })
-
-
-
-
-                                .then(index => {
-                                    this.loadingIndex = index;
-
-                                    switch (res.value) {
-                                        case 'hiburan':
-                                            this.hiburan();
-                                            break;
-                                        case 'nonton':
-                                            this.nonton();
-                                            break;
-                                        case 'sekolah':
-                                            this.sekolah();
-                                            break;
-                                        case 'wisata':
-                                            this.wisata();
-                                            break;
-                                        case 'olahraga':
-                                            this.olahraga();
-                                            break;
-                                        case 'kuliner':
-                                            this.kuliner();
-                                            break;
-
-                                        default:
-
-                                    }
-                                });
-
-
-
-
-                        });
-
-
-
-                }
-            };
-
-
-            chitchat.init();
-
-
-
-
-        </script>
-
-
-
 
 </body>
 
