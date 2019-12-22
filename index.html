@@ -24,6 +24,9 @@
             <p>Aplikasi penuntun jalan-jalan kemana saja <br>
                 dengan menggunakan angkutan umum atau bis kota. <br> <br>
                 Happy Weekend :)</p>
+
+
+
         </div>
 
         <div class="botui-app-container" id="botui-app">
@@ -46,13 +49,56 @@
 
 
                     },
-                    //----------Step by step Perjalanan Cibiru -------------------//
-                    biscibiru: function () {
 
+
+
+                    //------------------------------------------ HIBURAN -> ALUN-ALUN BANDUNG -------------------------------------------- DONE //
+
+
+                    //----------Step by step Perjalanan Cibiru ke Alun-alun pakai angkot-------------------//
+                    angkotcibiru_alunbandung: function () {
                         this.botui.message.add({
                             delay: 200,
                             loading: true,
-                            content: 'Ini adalah step-by-step naik bis dari Cibiru ke Alun-alun Kota Bandung.'
+                            content: 'Ini adalah step-by-step naik bis dari Cibiru ke Alun-alun Kota Bandung menggunakan Angkutan Umum.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            type: 'embed',
+                            content: 'http://humas.bandung.go.id/img/2019/999/alun2.jpg'
+
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Carilah Angkutan Umum dengan jurusan Cicaheum - Cileunyi menuju ke arah terminal Cicaheum. Lalu berhenti di terminal Cicaheum dan naik angkutan umum dengan jurusan  Cibeureum - Cicaheum menuju Cibeureum dan akan melewati Alun-alun Kota Bandung  (Perkiraan Waktu 2 jam). Biaya : Rp. 21.000. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //----------Step by step Perjalanan Cibiru ke Alun-alun pakai bus kota-------------------//
+                    biscibiru_alunbandung: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cibiru ke Alun-alun Kota Bandung menggunakan Bus Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            type: 'embed',
+                            content: 'http://humas.bandung.go.id/img/2019/999/alun2.jpg'
+
 
                         })
                         this.botui.message.add({
@@ -70,8 +116,9 @@
 
 
                     },
-                    //-------------- Cibiru Kategori ----------------------------//
-                    cibiru: function () {
+
+                    //-------------- Cibiru Kategori naik umum atau bus kota----------------------------//
+                    cibiru_alunbandung: function () {
 
                         this.botui.message.add({
                             delay: 200,
@@ -111,10 +158,10 @@
 
                                         switch (res.value) {
                                             case 'biscibiru':
-                                                this.biscibiru();
+                                                this.biscibiru_alunbandung();
                                                 break;
                                             case 'angkotcibiru':
-                                                this.angkotcibiru();
+                                                this.angkotcibiru_alunbandung();
                                                 break;
 
                                             default:
@@ -129,13 +176,76 @@
 
                     },
 
-                    //---------- alun - alun kategori -----------------------//
-                    alunbandung: function () {
+
+                    //----------Step by step Perjalanan Cicaheum ke Alun-alun pakai angkot-------------------//
+                    angkotcicaheum_alunbandung: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cicaheum ke Alun-alun Kota Bandung menggunakan Angkutan Umum.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            type: 'embed',
+                            content: 'http://humas.bandung.go.id/img/2019/999/alun2.jpg'
+
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Carilah Angkutan Umum dengan jurusan Cicaheum - Cileunyi dan lainnya menuju ke arah terminal Cicaheum. Lalu berhenti di terminal Cicaheum dan naik angkutan umum dengan jurusan  Cibeureum - Cicaheum menuju Cibeureum dan akan melewati Alun-alun Kota Bandung  (Perkiraan Waktu 2 jam). Biaya : Rp. 18.000. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //----------Step by step Perjalanan Cicaheum ke Alun-alun pakai bus kota-------------------//
+                    biscicaheum_alunbandung: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cicaheum ke Alun-alun Kota Bandung menggunakan Bus Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            type: 'embed',
+                            content: 'http://humas.bandung.go.id/img/2019/999/alun2.jpg'
+
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Pergi ke Terminal Cicaheum. Tunggulah Bis DAMRI dengan jurusan Alun-alun. Naik bis dan duduklah sampai tiba di tempat tujuan (Perkiraan Waktu 40 menit). Biaya : Rp. 6000. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //-------------- Cicaheum Kategori naik umum atau bus kota----------------------------//
+                    cicaheum_alunbandung: function () {
 
                         this.botui.message.add({
                             delay: 200,
                             loading: true,
-                            content: 'Dimana sekarang anda berada?'
+                            content: 'Mau naik apa anda hari ini?'
 
                         })
 
@@ -145,27 +255,12 @@
                                     delay: 1000,
                                     action: [
                                         {
-                                            text: 'Cibiru',
-                                            value: 'cibiru'
+                                            text: 'Bis Kota',
+                                            value: 'biscicaheum'
                                         },
                                         {
-                                            text: 'Cicaheum',
-                                            value: 'cicaheum'
-
-                                        },
-                                        {
-                                            text: 'Dago',
-                                            value: 'dago'
-
-                                        },
-                                        {
-                                            text: 'Cimahi',
-                                            value: 'cimahi'
-
-                                        },
-                                        {
-                                            text: 'Buah Batu',
-                                            value: 'buahbatu'
+                                            text: 'Angkutan Umum',
+                                            value: 'angkotcicaheum'
 
                                         },
                                     ]
@@ -184,20 +279,11 @@
                                         this.loadingIndex = index;
 
                                         switch (res.value) {
-                                            case 'cibiru':
-                                                this.cibiru();
+                                            case 'biscicaheum':
+                                                this.biscicahem_alunbandung();
                                                 break;
-                                            case 'cicaheum':
-                                                this.cicaheum();
-                                                break;
-                                            case 'dago':
-                                                this.dago();
-                                                break;
-                                            case 'cimahi':
-                                                this.cimahi();
-                                                break;
-                                            case 'buahbatu':
-                                                this.buahbatu();
+                                            case 'angkotcicaheum':
+                                                this.angkotcicahem_alunbandung();
                                                 break;
 
                                             default:
@@ -211,6 +297,1090 @@
 
 
                     },
+
+
+                    //----------Step by step Perjalanan Dago ke Alun-alun pakai angkot-------------------//
+                    angkotdago_alunbandung: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Dago ke Alun-alun Kota Bandung menggunakan Angkutan Umum.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            type: 'embed',
+                            content: 'http://humas.bandung.go.id/img/2019/999/alun2.jpg'
+
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Dari terminal Dago, naik angkot tujuan Dago-St Hall lalu turun di Stasiun Bandung. Setelah itu naik angkot tujuan St-Hall - Gedebage lalu turun di Alun-Alun Bandung. Perkiraan biaya kurang lebih 7000 dan perkiraan waktu tempuh kurang lebih 40 menit '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //----------Step by step Perjalanan Dago ke Alun-alun pakai bus kota-------------------//
+                    bisdago_alunbandung: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Dago ke Alun-alun Kota Bandung menggunakan Bus Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            type: 'embed',
+                            content: 'http://humas.bandung.go.id/img/2019/999/alun2.jpg'
+
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Naik bus kota dengan tujuan Dipatiukur-Leuwi Panjang lalu turun di Terminal Leuwi Panjang. Setelah itu lanjutkan perjalanan dengan bus kota tujuan Leuwi Panjang-Cicaheum lalu turun di Alun-Alun Bandung. Perkiraan waktu tempuh kurang lebih 1 jam. Biaya : Rp. 10.000. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //-------------- Dago Kategori naik umum atau bus kota----------------------------//
+                    dago_alunbandung: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Mau naik apa anda hari ini?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Bis Kota',
+                                            value: 'bisdago'
+                                        },
+                                        {
+                                            text: 'Angkutan Umum',
+                                            value: 'angkotdago'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'bisdago':
+                                                this.bisdago_alunbandung();
+                                                break;
+                                            case 'angkotdago':
+                                                this.angkotdago_alunbandung();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+                    //----------Step by step Perjalanan Cikutra ke Alun-alun pakai angkot-------------------//
+                    angkotcikutra_alunbandung: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cikutra ke Alun-alun Kota Bandung menggunakan Angkutan Umum.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            type: 'embed',
+                            content: 'http://humas.bandung.go.id/img/2019/999/alun2.jpg'
+
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Di Cikutra Kecamatan Cibeunying Kidul berjalan 850 meter ke Sambel Hejo Natuna. Naik angkutan kota jurusan Abdul Muis - Cicaheum Via Aceh menuju Kebon Kelapa. Lalu berhenti di HSBC dan berjalan 550 meter ke Alun-alun Kota Bandung. Dengan perkiraan waktu 1 jam 4 menit. Biaya : Rp. 18.000.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //----------Step by step Perjalanan Cikutra ke Alun-alun pakai bus kota-------------------//
+                    biscikutra_alunbandung: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cikutra ke Alun-alun Kota Bandung menggunakan Bus Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            type: 'embed',
+                            content: 'http://humas.bandung.go.id/img/2019/999/alun2.jpg'
+
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Di Cikutra Kecamatan Cibeunying Kidul, berjalan 1,5 km ke BTM. Lalu naik Bis Kota Jurusan Cibiru - Kebon Kelapa. Lalu berhenti di Halte Alun-alun Bandung. Perkiraan waktu 1 jam 20 menit. Biaya : Rp. 10.000. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //-------------- Cimahi Kategori naik umum atau bus kota----------------------------//
+                    cikutra_alunbandung: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Mau naik apa anda hari ini?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Bis Kota',
+                                            value: 'biscikutra'
+                                        },
+                                        {
+                                            text: 'Angkutan Umum',
+                                            value: 'angkotcikutra'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'biscikutra':
+                                                this.biscikutra_alunbandung();
+                                                break;
+                                            case 'angkotcikutra':
+                                                this.angkotcikutra_alunbandung();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+                    //----------Step by step Perjalanan Buah Batu ke Alun-alun pakai angkot-------------------//
+                    angkotbuahbatu_alunbandung: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Buah Batu ke Alun-alun Kota Bandung menggunakan Angkutan Umum.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            type: 'embed',
+                            content: 'http://humas.bandung.go.id/img/2019/999/alun2.jpg'
+
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Dari Kecamatan Buah Batu berjalan 550 meter ke Borma Ciwastra. Naik angkot Cicaheum - Derwati menuju ke Cicaheum. Setelah sampai di Kampus CSBI, naik angkot Cicadas - Elang menuju Elang. Setelah sampai di Plaza Parahyangan, berjalan 48 meter ke Alun-alun Kota Bandung. Dengan perkiraan waktu 1 jam 35 menit. Biaya : Rp. 13.500.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //----------Step by step Perjalanan Buah Batu ke Alun-alun pakai bus kota-------------------//
+                    bisbuahbatu_alunbandung: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Buah BAtu ke Alun-alun Kota Bandung menggunakan Bus Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            type: 'embed',
+                            content: 'http://humas.bandung.go.id/img/2019/999/alun2.jpg'
+
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Dari Kecamatan Buah Batu tunggu Bis Kota dengan jurusan Alun-alun. Tunggulah sampai tiba. Waktu kurang lebih 1 jam. Biaya 10.000.  '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //-------------- Buah Batu Kategori naik umum atau bus kota----------------------------//
+                    buahbatu_alunbandung: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Mau naik apa anda hari ini?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Bis Kota',
+                                            value: 'bisbuahbatu_alunbandung'
+                                        },
+                                        {
+                                            text: 'Angkutan Umum',
+                                            value: 'angkotbuahbatu_alunbandung'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'bisbuahbatu_alunbandung':
+                                                this.bisbuahbatu_alunbandung();
+                                                break;
+                                            case 'angkotbuahbatu_alunbandung':
+                                                this.angkotbuahbatu_alunbandung();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+                    //---------- tempat user menuju ke alun-alun bandung-----------------------//
+                    alunbandung: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Dimana sekarang anda berada?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Cibiru',
+                                            value: 'cibiru_alunbandung'
+                                        },
+                                        {
+                                            text: 'Cicaheum',
+                                            value: 'cicaheum_alunbandung'
+
+                                        },
+                                        {
+                                            text: 'Dago',
+                                            value: 'dago_alunbandung'
+
+                                        },
+                                        {
+                                            text: 'Cikutra',
+                                            value: 'cikutra_alunbandung'
+
+                                        },
+                                        {
+                                            text: 'Buah Batu',
+                                            value: 'buahbatu_alunbandung'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'cibiru_alunbandung':
+                                                this.cibiru_alunbandung();
+                                                break;
+                                            case 'cicaheum_alunbandung':
+                                                this.cicaheum_alunbandung();
+                                                break;
+                                            case 'dago_alunbandung':
+                                                this.dago_alunbandung();
+                                                break;
+                                            case 'cikutra_alunbandung':
+                                                this.cikutra_alunbandung();
+                                                break;
+                                            case 'buahbatu':
+                                                this.buahbatu_alunbandung();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+
+                    //------------------------------------------ HIBURAN ->  GEDUNG SATE-------------------------------------------- BELUM//
+
+                    //----------Step by step Perjalanan Cibiru ke GEDUNG SATE pakai angkot-------------------D//
+                    angkotcibiru_gedungsate: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cibiru ke Gedung Sate Bandung menggunakan Angkutan Umum.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Carilah Angkutan Kota di Cibiru dengan jurusan Cicaheum - Cileunyi menuju Cicaheum. Berhenti di Terminal Cicaheum, lalu naik Angkuta Kota dengan Jurusan Cicaheum - Sarijadi menuju Sarijadi.  Dan berhenti di Halte Geologi, lalu berjalan sejauh 400 meter dan sampailah di Gedung Sate Kota Bandung. (Perkiraan Waktu 1 jam). Biaya : Rp. 21.000. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //----------Step by step Perjalanan Cibiru ke GEDUNG SATE pakai bus kota------------------- D//
+                    biscibiru_gedungsate: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cibiru ke Gedung Sate Bandung menggunakan Bus Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Carilah Bis di Cibiru dengan jurusan Cibiru - Kebon Kalapa menuju Kebon Kalapa. Lalu berhenti di Halte TMB Cicaheum, dan naik Bis dengan jurusan  Cicaheum - Sarijadi menuju Sarijadi. Dan berhenti di Halte Geologi, lalu berjalan sejauh 400 meter dan sampailah di Gedung Sate Kota Bandung. Naik bis dan duduklah sampai tiba di tempat tujuan (Perkiraan Waktu 40 menit). Biaya : Rp. 13000. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //-------------- Cibiru Kategori naik umum atau bus kota----------------------------D//
+                    cibiru_gedungsate: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Mau naik apa anda hari ini?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Bis Kota',
+                                            value: 'biscibiru_gedungsate'
+                                        },
+                                        {
+                                            text: 'Angkutan Umum',
+                                            value: 'angkotcibiru_gedungsate'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'biscibiru_gedungsate':
+                                                this.biscibiru_gedungsate();
+                                                break;
+                                            case 'angkotcibiru_gedungsate':
+                                                this.angkotcibiru_gedungsate();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+                    //----------Step by step Perjalanan Cicaheum ke GEDUNG SATE pakai angkot-------------------D//
+                    angkotcicaheum_gedungsate: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cicaheum ke Gedung Sate Bandung menggunakan Angkutan Umum.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Carilah Angkutan Kota di Cicaheum dengan jurusan Cicaheum - Cileunyi menuju Cicaheum atau Angkutan Kota yang lainnya menuju ke Terminal Cicaheum. Berhenti di Terminal Cicaheum, lalu naik Angkuta Kota dengan Jurusan Cicaheum - Sarijadi menuju Sarijadi.  Dan berhenti di Halte Geologi, lalu berjalan sejauh 400 meter dan sampailah di Gedung Sate Kota Bandung. (Perkiraan Waktu 1 jam). Biaya : Rp. 11.000. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //----------Step by step Perjalanan Cicaheum ke GEDUNG SATE pakai bus kota-------------------D//
+                    biscicaheum_gedungsate: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cicaheum ke Gedung Sate Bandung menggunakan Bus Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Naik Angkutan Kota menuju Terminal Cicaheum. Lalu berhenti di Halte TMB Cicaheum, dan naik Bis dengan jurusan  Cicaheum - Sarijadi menuju Sarijadi. Dan berhenti di Halte Geologi, lalu berjalan sejauh 400 meter dan sampailah di Gedung Sate Kota Bandung. Naik bis dan duduklah sampai tiba di tempat tujuan (Perkiraan Waktu 40 menit). Biaya : Rp. 6.000. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //-------------- Cicaheum Kategori naik umum atau bus kota----------------------------D//
+                    cicaheum_gedungsate: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Mau naik apa anda hari ini?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Bis Kota',
+                                            value: 'biscicaheum_gedungsate'
+                                        },
+                                        {
+                                            text: 'Angkutan Umum',
+                                            value: 'angkotcicaheum_gedungsate'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'biscicaheum_gedungsate':
+                                                this.biscicaheum_gedungsate();
+                                                break;
+                                            case 'angkotcicaheum_gedungsate':
+                                                this.angkotcicaheum_gedungsate();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+                    //----------Step by step Perjalanan Dago ke GEDUNG SATE pakai angkot-------------------//
+                    angkotdago_gedungsate: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Dago ke Gedung Sate Bandung menggunakan Angkutan Umum.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Dari terminal Dago, naik angkot tujuan Dago-St Hall lalu turun di Stasiun Bandung. Setelah itu naik angkot tujuan St-Hall - Gedebage lalu turun di Alun-Alun Bandung. Perkiraan biaya kurang lebih 7000 dan perkiraan waktu tempuh kurang lebih 40 menit '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //----------Step by step Perjalanan Dago ke GEDUNG SATE pakai bus kota-------------------//
+                    bisdago_gedungsate: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Dago ke Gedung Sate Bandung menggunakan Bus Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Naik bus kota dengan tujuan Dipatiukur-Leuwi Panjang lalu turun di Terminal Leuwi Panjang. Setelah itu lanjutkan perjalanan dengan bus kota tujuan Leuwi Panjang-Cicaheum lalu turun di Alun-Alun Bandung. Perkiraan waktu tempuh kurang lebih 1 jam. Biaya : Rp. 10.000. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //-------------- Dago Kategori naik umum atau bus kota----------------------------//
+                    dago_gedungsate: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Mau naik apa anda hari ini?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Bis Kota',
+                                            value: 'bisdago_gedungsate'
+                                        },
+                                        {
+                                            text: 'Angkutan Umum',
+                                            value: 'angkotdago_gedungsate'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'bisdago_gedungsate':
+                                                this.bisdago_gedungsate();
+                                                break;
+                                            case 'angkotdago_gedungsate':
+                                                this.angkotdago_gedungsate();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+                    //----------Step by step Perjalanan Cikutra ke GEDUNG SATE pakai angkot-------------------//
+                    angkotcikutra_gedungsate: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cikutra ke Gedung Sate Bandung menggunakan Angkutan Umum.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Di Cikutra Kecamatan Cibeunying Kidul berjalan 850 meter ke Sambel Hejo Natuna. Naik angkutan kota jurusan Abdul Muis - Cicaheum Via Aceh menuju Kebon Kelapa. Lalu berhenti di HSBC dan berjalan 550 meter ke Alun-alun Kota Bandung. Dengan perkiraan waktu 1 jam 4 menit. Biaya : Rp. 18.000.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //----------Step by step Perjalanan Cikutra ke GEDUNG SATE pakai bus kota-------------------//
+                    biscikutra_gedungsate: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cikutra ke Gedung Sate Bandung menggunakan Bus Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Di Cikutra Kecamatan Cibeunying Kidul, berjalan 1,5 km ke BTM. Lalu naik Bis Kota Jurusan Cibiru - Kebon Kelapa. Lalu berhenti di Halte Alun-alun Bandung. Perkiraan waktu 1 jam 20 menit. Biaya : Rp. 10.000. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //-------------- Cimahi Kategori naik umum atau bus kota----------------------------//
+                    cikutra_gedungsate: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Mau naik apa anda hari ini?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Bis Kota',
+                                            value: 'biscikutra_gedungsate'
+                                        },
+                                        {
+                                            text: 'Angkutan Umum',
+                                            value: 'angkotcikutra_gedungsate'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'biscikutra_gedungsate':
+                                                this.biscikutra_gedungsate();
+                                                break;
+                                            case 'angkotcikutra_gedungsate':
+                                                this.angkotcikutra_gedungsate();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+                    //----------Step by step Perjalanan Buah Batu ke GEDUNG SATE pakai angkot-------------------//
+                    angkotbuahbatu_gedungsate: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Buah Batu ke Gedung Sate Bandung menggunakan Angkutan Umum.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Dari Kecamatan Buah Batu berjalan 550 meter ke Borma Ciwastra. Naik angkot Cicaheum - Derwati menuju ke Cicaheum. Setelah sampai di Kampus CSBI, naik angkot Cicadas - Elang menuju Elang. Setelah sampai di Plaza Parahyangan, berjalan 48 meter ke Alun-alun Kota Bandung. Dengan perkiraan waktu 1 jam 35 menit. Biaya : Rp. 13.500.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //----------Step by step Perjalanan Buah Batu ke GEDUNG SATE pakai bus kota-------------------//
+                    bisbuahbatu_gedungsate: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Buah BAtu ke Gedung Sate Bandung menggunakan Bus Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Dari Kecamatan Buah Batu tunggu Bis Kota dengan jurusan Alun-alun. Tunggulah sampai tiba. Waktu kurang lebih 1 jam. Biaya 10.000.  '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //-------------- Buah Batu Kategori naik umum atau bus kota----------------------------//
+                    buahbatu_gedungsate: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Mau naik apa anda hari ini?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Bis Kota',
+                                            value: 'bisbuahbatu_gedungsate'
+                                        },
+                                        {
+                                            text: 'Angkutan Umum',
+                                            value: 'angkotbuahbatu_gedungsate'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'bisbuahbatu_gedungsate':
+                                                this.bisbuahbatu_gedungsate();
+                                                break;
+                                            case 'angkotbuahbatu_gedungsate':
+                                                this.angkotbuahbatu_gedungsate();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+                    //---------- tempat user menuju ke GEDUNG SATE bandung-----------------------//
+                    gedungsate: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Dimana sekarang anda berada?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Cibiru',
+                                            value: 'cibiru_gedungsate'
+                                        },
+                                        {
+                                            text: 'Cicaheum',
+                                            value: 'cicaheum_gedungsate'
+
+                                        },
+                                        {
+                                            text: 'Dago',
+                                            value: 'dago_gedungsate'
+
+                                        },
+                                        {
+                                            text: 'Cikutra',
+                                            value: 'cikutra_gedungsate'
+
+                                        },
+                                        {
+                                            text: 'Buah Batu',
+                                            value: 'buahbatu_gedungsate'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'cibiru_gedungsate':
+                                                this.cibiru_gedungsate();
+                                                break;
+                                            case 'cicaheum_gedungsate':
+                                                this.cicaheum_gedungsate();
+                                                break;
+                                            case 'dago_gedungsate':
+                                                this.dago_gedungsate();
+                                                break;
+                                            case 'cikutra_gedungsate':
+                                                this.cikutra_gedungsate();
+                                                break;
+                                            case 'buahbatu_gedungsate':
+                                                this.buahbatu_gedungsate();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+
+
+
+
+
 
                     //  Kategori -----------------------------------------------------------------// 
                     nonton: function () {
@@ -229,12 +1399,9 @@
                         this.botui.message.add({
                             delay: 200,
                             loading: true,
-                            content: 'Inilah 5 tempat yang sering dikunjungi oleh masyarakat Bandung. Silahkan pilih'
+                            content: 'Inilah 5 tempat yang sering dikunjungi oleh masyarakat Bandung. Silahkan pilih :'
 
                         })
-
-
-
                             .then(() => {
                                 return this.botui.action.button({
 
@@ -350,7 +1517,7 @@
 
 
 
-                    //--------------Home Chat Bot -------------------------------------------//
+                    //--------------Home Chat -------------------------------------------//
 
                     start: function () {
                         this.botui.message.bot({
