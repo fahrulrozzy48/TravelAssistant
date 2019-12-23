@@ -750,7 +750,7 @@
 
 
 
-                    //------------------------------------------ HIBURAN ->  GEDUNG SATE-------------------------------------------- BELUM//
+                    //------------------------------------------ HIBURAN ->  GEDUNG SATE-------------------------------------------- DONE//
 
                     //----------Step by step Perjalanan Cibiru ke GEDUNG SATE pakai angkot-------------------D//
                     angkotcibiru_gedungsate: function () {
@@ -968,29 +968,31 @@
                     },
 
 
-                    //----------Step by step Perjalanan Dago ke GEDUNG SATE pakai angkot-------------------//
-                    angkotdago_gedungsate: function () {
-                        this.botui.message.add({
-                            delay: 200,
-                            loading: true,
-                            content: 'Ini adalah step-by-step naik bis dari Dago ke Gedung Sate Bandung menggunakan Angkutan Umum.'
+                    //----------Step by step Perjalanan Dago ke GEDUNG SATE pakai bus-------------------D//
+                    // angkotdago_gedungsate: function () {
+                    //     this.botui.message.add({
+                    //         delay: 200,
+                    //         loading: true,
+                    //         content: 'Ini adalah step-by-step naik bis dari Dago ke Gedung Sate Bandung menggunakan Angkutan Umum.'
 
-                        })
-                        this.botui.message.add({
-                            delay: 200,
-                            loading: true,
-                            content: 'Dari terminal Dago, naik angkot tujuan Dago-St Hall lalu turun di Stasiun Bandung. Setelah itu naik angkot tujuan St-Hall - Gedebage lalu turun di Alun-Alun Bandung. Perkiraan biaya kurang lebih 7000 dan perkiraan waktu tempuh kurang lebih 40 menit '
+                    //     })
+                    //     this.botui.message.add({
+                    //         delay: 200,
+                    //         loading: true,
+                    //         content: 'Dari daerah Coblong berjalan 300 meter ke Monumen Perjuangan Jabar. Lalu naik Bis jurusan Dipatiukur - Jatinangor menuju Jatinangor. Berhenti di Halte Perpustakaan Kementrian ESDM. Lalu berjalan 110 meter dan sampai di Gedung Sate Kota Bandung. Perkiraan waktu 13 menit. Biaya : Rp. 8.000.  '
 
-                        })
-                        this.botui.message.add({
-                            delay: 200,
-                            loading: true,
-                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+                    //     })
+                    //     this.botui.message.add({
+                    //         delay: 200,
+                    //         loading: true,
+                    //         content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
 
-                        })
+                    //     })
 
 
-                    },
+                    // },
+
+
 
                     //----------Step by step Perjalanan Dago ke GEDUNG SATE pakai bus kota-------------------//
                     bisdago_gedungsate: function () {
@@ -1003,7 +1005,7 @@
                         this.botui.message.add({
                             delay: 200,
                             loading: true,
-                            content: 'Naik bus kota dengan tujuan Dipatiukur-Leuwi Panjang lalu turun di Terminal Leuwi Panjang. Setelah itu lanjutkan perjalanan dengan bus kota tujuan Leuwi Panjang-Cicaheum lalu turun di Alun-Alun Bandung. Perkiraan waktu tempuh kurang lebih 1 jam. Biaya : Rp. 10.000. '
+                            content: 'Dari daerah Coblong berjalan 300 meter ke Monumen Perjuangan Jabar. Lalu naik Bis jurusan Dipatiukur - Jatinangor menuju Jatinangor. Berhenti di Halte Perpustakaan Kementrian ESDM. Lalu berjalan 110 meter dan sampai di Gedung Sate Kota Bandung. Perkiraan waktu 13 menit. Biaya : Rp. 8.000. '
 
                         })
                         this.botui.message.add({
@@ -1016,7 +1018,7 @@
 
                     },
 
-                    //-------------- Dago Kategori naik umum atau bus kota----------------------------//
+                    //-------------- Dago Kategori naik umum atau bus kota----------------------------D//
                     dago_gedungsate: function () {
 
                         this.botui.message.add({
@@ -1034,11 +1036,6 @@
                                         {
                                             text: 'Bis Kota',
                                             value: 'bisdago_gedungsate'
-                                        },
-                                        {
-                                            text: 'Angkutan Umum',
-                                            value: 'angkotdago_gedungsate'
-
                                         },
                                     ]
 
@@ -1058,9 +1055,6 @@
                                         switch (res.value) {
                                             case 'bisdago_gedungsate':
                                                 this.bisdago_gedungsate();
-                                                break;
-                                            case 'angkotdago_gedungsate':
-                                                this.angkotdago_gedungsate();
                                                 break;
 
                                             default:
@@ -1087,7 +1081,7 @@
                         this.botui.message.add({
                             delay: 200,
                             loading: true,
-                            content: 'Di Cikutra Kecamatan Cibeunying Kidul berjalan 850 meter ke Sambel Hejo Natuna. Naik angkutan kota jurusan Abdul Muis - Cicaheum Via Aceh menuju Kebon Kelapa. Lalu berhenti di HSBC dan berjalan 550 meter ke Alun-alun Kota Bandung. Dengan perkiraan waktu 1 jam 4 menit. Biaya : Rp. 18.000.'
+                            content: 'Di Cikutra Kecamatan Cibeunying Kidul berjalan 600 meter ke Halte Unicon Bata Ringan. Naik Angkutan Kota jurusan Cicaheum - Dewarti menuju Derwati. Berhenti di Halte Perpustakaan Kementrian ESDM. Lalu berjalan 110 meter dan sampai Gedung Djati. Dengan perkiraan waktu 27 menit. Biaya : Rp. 6.000.'
 
                         })
                         this.botui.message.add({
@@ -1111,7 +1105,7 @@
                         this.botui.message.add({
                             delay: 200,
                             loading: true,
-                            content: 'Di Cikutra Kecamatan Cibeunying Kidul, berjalan 1,5 km ke BTM. Lalu naik Bis Kota Jurusan Cibiru - Kebon Kelapa. Lalu berhenti di Halte Alun-alun Bandung. Perkiraan waktu 1 jam 20 menit. Biaya : Rp. 10.000. '
+                            content: 'Di Cikutra Kecamatan Cibeunying Kidul berjalan 650 meter ke Shelter TMB PHH Mustafa 02. Naik Bis jurusan Cicaheum - Sarijadi menuju Sarijadi. Berhenti di Halte Geologi. Lalu berjalan 400 meter dan sampai Gedung Djati. Dengan perkiraan waktu 27 menit. Biaya : Rp. 6.000.'
 
                         })
                         this.botui.message.add({
@@ -1195,7 +1189,7 @@
                         this.botui.message.add({
                             delay: 200,
                             loading: true,
-                            content: 'Dari Kecamatan Buah Batu berjalan 550 meter ke Borma Ciwastra. Naik angkot Cicaheum - Derwati menuju ke Cicaheum. Setelah sampai di Kampus CSBI, naik angkot Cicadas - Elang menuju Elang. Setelah sampai di Plaza Parahyangan, berjalan 48 meter ke Alun-alun Kota Bandung. Dengan perkiraan waktu 1 jam 35 menit. Biaya : Rp. 13.500.'
+                            content: 'Dari Jl. Buah Batu Regency, Kujangsari berjalan 600 meter ke Pool Bluebird Bandung. Naik angkot Ps Sederhana - Buah Batu menuju ke Buah Batu. Setelah sampai di Indomaret Karaputan 64, naik angkot Abdul Muis - Ledeng menuju Ledeng. Setelah sampai di Halte Banda, berjalan 450 meter ke Gedung Sate Kota Bandung. Dengan perkiraan waktu 1 jam 44 menit. Biaya : Rp. 22.000.'
 
                         })
                         this.botui.message.add({
@@ -1219,7 +1213,7 @@
                         this.botui.message.add({
                             delay: 200,
                             loading: true,
-                            content: 'Dari Kecamatan Buah Batu tunggu Bis Kota dengan jurusan Alun-alun. Tunggulah sampai tiba. Waktu kurang lebih 1 jam. Biaya 10.000.  '
+                            content: 'Dari Jl. Buah Batu Regency, Kujangsari berjalan 600 meter ke Pool Bluebird Bandung. Naik angkot Ps Sederhana - Buah Batu menuju ke Buah Batu. Setelah sampai di Bank UOB BKR, berjalan 350 meter ke Hotel Rinjani. Setelah sampai, naik Bis dengan Jurusan Dipatiukur - Jatinangor menuju Dipatiukur. Berhenti di Taman Lansia dan berjalan 120 meter ke Gedung Sate Kota Bandung. Dengan perkiraan waktu 1 jam 46 menit. Biaya : Rp. 18.000. '
 
                         })
                         this.botui.message.add({
@@ -1377,6 +1371,1879 @@
 
 
 
+
+                    //------------------------------------------ HIBURAN ->  FARM HOUSE-------------------------------------------- DONE//
+
+                    //----------Step by step Perjalanan Cibiru ke FARM HOUSE pakai angkot-------------------//
+                    angkotcibiru_farmhouse: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cibiru ke Gedung Sate Bandung menggunakan Angkutan Umum.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari pusat kecamatan cibiru ke apotek bhakti kencana farma, lalu carilah angkutan umum cibiru – kebon kalapa menuju kebon kalapa. Berhenti di halte TMB Cicaheum, dari sana naik angkutan umum dari cicaheum ke sarijadi menuju sarijadi lalu berhenti di halte djunjunan (paskal). Berjalan selama kurang lebih 3 menit ke halte paskal (rshs). Naik angkutan umum dari Ciroyom ke Lembang menuju Lembang. Berhenti di Kantor Desa Gudang Kahuripan. Berjalan selama kurang lebih 2 menit. Anda tiba di Farm House Lembang. Estimasi biaya Rp. 23.000,-. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //----------Step by step Perjalanan Cibiru ke FARM HOUSE pakai bus kota------------------- //
+                    biscibiru_farmhouse: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cibiru ke Gedung Sate Bandung menggunakan Bus Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari pusat kecamatan cibiru ke apotek bhakti kencana farma, lalu carilah bis cibiru – kebon kalapa menuju kebon kalapa. Berhenti di halte TMB Cicaheum, dari sana naiklah bis dari cicaheum ke sarijadi menuju sarijadi lalu berhenti di halte djunjunan (paskal). Berjalan selama kurang lebih 3 menit ke halte paskal (rshs). Naik angkutan umum dari Ciroyom ke Lembang menuju Lembang. Berhenti di Kantor Desa Gudang Kahuripan. Berjalan selama kurang lebih 2 menit. Anda tiba di Farm House Lembang. Estimasi biaya Rp. 23.000. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //-------------- Cibiru Kategori naik umum atau bus kota----------------------------//
+                    cibiru_farmhouse: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Mau naik apa anda hari ini?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Bis Kota',
+                                            value: 'biscibiru_farmhouse'
+                                        },
+                                        {
+                                            text: 'Angkutan Umum',
+                                            value: 'angkotcibiru_farmhouse'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'biscibiru_farmhouse':
+                                                this.biscibiru_farmhouse();
+                                                break;
+                                            case 'angkotcibiru_farmhouse':
+                                                this.angkotcibiru_farmhouse();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+                    //----------Step by step Perjalanan Cicaheum ke FARM HOUSE pakai angkot-------------------//
+                    angkotcicaheum_farmhouse: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cicaheum ke Gedung Sate Bandung menggunakan Angkutan Umum.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari pusat kecamatan cibiru ke apotek bhakti kencana farma, lalu carilah angkutan umum cibiru – kebon kalapa menuju kebon kalapa. Berhenti di halte TMB Cicaheum, dari sana naik angkutan umum dari cicaheum ke sarijadi menuju sarijadi lalu berhenti di halte djunjunan (paskal). Berjalan selama kurang lebih 3 menit ke halte paskal (rshs). Naik angkutan umum dari Ciroyom ke Lembang menuju Lembang. Berhenti di Kantor Desa Gudang Kahuripan. Berjalan selama kurang lebih 2 menit. Anda tiba di Farm House Lembang. Estimasi biaya Rp. 23.000,-. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //----------Step by step Perjalanan Cicaheum ke FARM HOUSE pakai bus kota-------------------//
+                    biscicaheum_farmhouse: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cicaheum ke Gedung Sate Bandung menggunakan Bus Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari kecamatan kiaracondong ke Halte TMB – PHH Mustafa 01 selama kurang lebih 15 menit, lalu carilah bis cicaheum – sarijadi menuju sarijadi. Berhenti di halte Djunjunan (Paskal), lalu berjalan selama kurang lebih 3 menit ke halte paskal (rshs). Di sana naik angkutan umum ciroyom – lembang menuju lembang. Berhenti di Kantor Desa Gudang Kahuripan. Berjalan selama kurang lebih 2 menit dan tibalah di Farm House Lembang. Estimasi biaya Rp. 13.000,-. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //-------------- Cicaheum Kategori naik umum atau bus kota----------------------------//
+                    cicaheum_farmhouse: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Mau naik apa anda hari ini?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Bis Kota',
+                                            value: 'biscicaheum_farmhouse'
+                                        },
+                                        {
+                                            text: 'Angkutan Umum',
+                                            value: 'angkotcicaheum_farmhouse'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'biscicaheum_farmhouse':
+                                                this.biscicaheum_farmhouse();
+                                                break;
+                                            case 'angkotcicaheum_farmhouse':
+                                                this.angkotcicaheum_farmhouse();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+                    //----------Step by step Perjalanan Dago ke FARM HOUSE pakai angkot-------------------//
+                    angkotdago_farmhouse: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Dago ke Gedung Sate Bandung menggunakan Angkutan Umum.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari pusat kecamatan cibiru ke apotek bhakti kencana farma, lalu carilah angkutan umum cibiru – kebon kalapa menuju kebon kalapa. Berhenti di halte TMB Cicaheum, dari sana naik angkutan umum dari cicaheum ke sarijadi menuju sarijadi lalu berhenti di halte djunjunan (paskal). Berjalan selama kurang lebih 3 menit ke halte paskal (rshs). Naik angkutan umum dari Ciroyom ke Lembang menuju Lembang. Berhenti di Kantor Desa Gudang Kahuripan. Berjalan selama kurang lebih 2 menit. Anda tiba di Farm House Lembang. Estimasi biaya Rp. 23.000,-.  '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //----------Step by step Perjalanan Dago ke FARM HOUSE pakai bus kota-------------------//
+                    bisdago_farmhouse: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Dago ke Gedung Sate Bandung menggunakan Bus Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari kecamatan kiaracondong ke Halte TMB – PHH Mustafa 01 selama kurang lebih 15 menit, lalu carilah bis cicaheum – sarijadi menuju sarijadi. Berhenti di halte Djunjunan (Paskal), lalu berjalan selama kurang lebih 3 menit ke halte paskal (rshs). Di sana naik angkutan umum ciroyom – lembang menuju lembang. Berhenti di Kantor Desa Gudang Kahuripan. Berjalan selama kurang lebih 2 menit dan tibalah di Farm House Lembang. Estimasi biaya Rp. 13.000,-. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //-------------- Dago Kategori naik umum atau bus kota----------------------------//
+                    dago_farmhouse: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Mau naik apa anda hari ini?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Bis Kota',
+                                            value: 'bisdago_farmhouse'
+                                        }, {
+                                            text: 'Angkutan Kota',
+                                            value: 'angkotdago_farmhouse'
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'bisdago_farmhouse':
+                                                this.bisdago_farmhouse();
+                                                break;
+                                            case 'angkotdago_farmhouse':
+                                                this.angkotdago_farmhouse();
+                                                break;
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+                    //----------Step by step Perjalanan Cikutra ke FARM HOUSE pakai angkot-------------------//
+                    angkotcikutra_farmhouse: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cikutra ke Gedung Sate Bandung menggunakan Angkutan Umum.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari kecamatan cibeunying kidul ke Shelter TMB PHH Mustafa 02 selama kurang lebih 8 menit, lalu carilah angkutan umum cicaheum – sarijadi menuju sarijadi. Berhenti di Halte Djunjunan (Paskal), lalu berjalan selama kurang lebih 3 menit ke Halte Paskal (RSHS). Di sana naik angkutan umum ciroyom – lembang menuju lembang. Berhenti di Kantor Desa Gudang Kahuripan. Berjalan selama kurang lebih 2 menit dan tibalah di Farm House Lembang. Biaya : Rp. 18.000.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //----------Step by step Perjalanan Cikutra ke FARM HOUSE pakai bus kota-------------------//
+                    biscikutra_farmhouse: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cikutra ke Gedung Sate Bandung menggunakan Bus Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari kecamatan kiaracondong ke Halte TMB – PHH Mustafa 01 selama kurang lebih 15 menit, lalu carilah bis cicaheum – sarijadi menuju sarijadi. Berhenti di halte Djunjunan (Paskal), lalu berjalan selama kurang lebih 3 menit ke halte paskal (rshs). Di sana naik angkutan umum ciroyom – lembang menuju lembang. Berhenti di Kantor Desa Gudang Kahuripan. Berjalan selama kurang lebih 2 menit dan tibalah di Farm House Lembang. Estimasi biaya Rp. 13.000,-.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //-------------- Cimahi Kategori naik umum atau bus kota----------------------------//
+                    cikutra_farmhouse: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Mau naik apa anda hari ini?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Bis Kota',
+                                            value: 'biscikutra_farmhouse'
+                                        },
+                                        {
+                                            text: 'Angkutan Umum',
+                                            value: 'angkotcikutra_farmhouse'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'biscikutra_farmhouse':
+                                                this.biscikutra_farmhouse();
+                                                break;
+                                            case 'angkotcikutra_farmhouse':
+                                                this.angkotcikutra_farmhouse();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+                    //----------Step by step Perjalanan Buah Batu ke FARM HOUSE pakai angkot-------------------//
+                    angkotbuahbatu_farmhouse: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Buah Batu ke Gedung Sate Bandung menggunakan Angkutan Umum.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari kecamatan Buahbatu ke Kantor Pos Processing Center selama kurang lebih 18 menit, lalu carilah angkutan umum ledeng – margahayu menuju ledeng. Berhenti di Halte Cipaganti 1, lalu berjalan selama kurang lebih 9 menit ke Ciwalk.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //----------Step by step Perjalanan Buah Batu ke FARM HOUSE pakai bus kota-------------------//
+                    bisbuahbatu_farmhouse: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Buah BAtu ke Gedung Sate Bandung menggunakan Bus Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari kecamatan Buahbatu ke Kantor Pos Processing Center selama kurang lebih 18 menit, lalu carilah angkutan umum ledeng – margahayu menuju ledeng. Berhenti di Unpas Setia Budhi, lalu naik angkutan umum Ciroyom – Lembang menuju Lembang. Berhenti  di Kantor Desa Gudang Kahuripan. Berjalan selama kurang lebih 2 menit dan tibalah di Farm House Lembang. Biaya : Rp. 10.000. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //-------------- Buah Batu Kategori naik umum atau bus kota----------------------------//
+                    buahbatu_farmhouse: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Mau naik apa anda hari ini?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Bis Kota',
+                                            value: 'bisbuahbatu_farmhouse'
+                                        },
+                                        {
+                                            text: 'Angkutan Umum',
+                                            value: 'angkotbuahbatu_farmhouse'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'bisbuahbatu_farmhouse':
+                                                this.bisbuahbatu_farmhouse();
+                                                break;
+                                            case 'angkotbuahbatu_farmhouse':
+                                                this.angkotbuahbatu_farmhouse();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+                    //---------- tempat user menuju ke GEDUNG SATE bandung-----------------------//
+                    farmhouse: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Dimana sekarang anda berada?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Cibiru',
+                                            value: 'cibiru_farmhouse'
+                                        },
+                                        {
+                                            text: 'Cicaheum',
+                                            value: 'cicaheum_farmhouse'
+
+                                        },
+                                        {
+                                            text: 'Dago',
+                                            value: 'dago_farmhouse'
+
+                                        },
+                                        {
+                                            text: 'Cikutra',
+                                            value: 'cikutra_farmhouse'
+
+                                        },
+                                        {
+                                            text: 'Buah Batu',
+                                            value: 'buahbatu_farmhouse'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'cibiru_farmhouse':
+                                                this.cibiru_farmhouse();
+                                                break;
+                                            case 'cicaheum_farmhouse':
+                                                this.cicaheum_farmhouse();
+                                                break;
+                                            case 'dago_farmhouse':
+                                                this.dago_farmhouse();
+                                                break;
+                                            case 'cikutra_farmhouse':
+                                                this.cikutra_farmhouse();
+                                                break;
+                                            case 'buahbatu_farmhouse':
+                                                this.buahbatu_farmhouse();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+
+
+                    //------------------------------------------ HIBURAN ->  CIWALK-------------------------------------------- DONE//
+
+                    //----------Step by step Perjalanan Cibiru ke CIWALK pakai angkot-------------------//
+                    angkotcibiru_ciwalk: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cibiru ke Gedung Sate Bandung menggunakan Angkutan Umum.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari pusat kecamatan cibiru ke apotek bhakti kencana farma selama kurang lebih 20 menit, lalu carilah angkutan umum cibiru – kebon kalapa menuju kebon kalapa. Berhenti di Oyen Ujung Berung, dari sana naiklah angkutan umum dari cicaheum - cileunyi menuju cicaheum lalu berhenti di halte TMB Cicaheum. Naiklah angkutan umum dari Cicaheum ke Sarijadi menuju Sarijadi. Berhenti di Halte ITB. Berjalan selama kurang lebih 15 menit. Anda tiba di Ciwalk. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //----------Step by step Perjalanan Cibiru ke CIWALK pakai bus kota------------------- //
+                    biscibiru_ciwalk: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cibiru ke Gedung Sate Bandung menggunakan Bus Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari kecamatan Buahbatu ke Kantor Pos Processing Center selama kurang lebih 18 menit, lalu carilah angkutan umum ledeng – margahayu menuju ledeng. Berhenti di Halte Cipaganti 1, lalu berjalan selama kurang lebih 9 menit ke Ciwalk. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //-------------- Cibiru Kategori naik umum atau bus kota----------------------------//
+                    cibiru_ciwalk: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Mau naik apa anda hari ini?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Bis Kota',
+                                            value: 'biscibiru_ciwalk'
+                                        },
+                                        {
+                                            text: 'Angkutan Umum',
+                                            value: 'angkotcibiru_ciwalk'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'biscibiru_ciwalk':
+                                                this.biscibiru_ciwalk();
+                                                break;
+                                            case 'angkotcibiru_ciwalk':
+                                                this.angkotcibiru_ciwalk();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+                    //----------Step by step Perjalanan Cicaheum ke CIWALK pakai angkot-------------------//
+                    angkotcicaheum_ciwalk: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cicaheum ke Gedung Sate Bandung menggunakan Angkutan Umum.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari kecamatan kiaracondong ke Halte TMB – PHH Mustafa 01 selama kurang lebih 14 menit, lalu carilah angkutan umum cicaheum – sarijadi menuju sarijadi. Berhenti di Halte ITB, lalu berjalan selama kurang lebih 15 menit ke Ciwalk. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //----------Step by step Perjalanan Cicaheum ke CIWALK pakai bus kota-------------------//
+                    biscicaheum_ciwalk: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cicaheum ke Gedung Sate Bandung menggunakan Bus Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari kecamatan Buahbatu ke Kantor Pos Processing Center selama kurang lebih 18 menit, lalu carilah angkutan umum ledeng – margahayu menuju ledeng. Berhenti di Halte Cipaganti 1, lalu berjalan selama kurang lebih 9 menit ke Ciwalk. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //-------------- Cicaheum Kategori naik umum atau bus kota----------------------------//
+                    cicaheum_ciwalk: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Mau naik apa anda hari ini?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Bis Kota',
+                                            value: 'biscicaheum_ciwalk'
+                                        },
+                                        {
+                                            text: 'Angkutan Umum',
+                                            value: 'angkotcicaheum_ciwalk'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'biscicaheum_ciwalk':
+                                                this.biscicaheum_ciwalk();
+                                                break;
+                                            case 'angkotcicaheum_ciwalk':
+                                                this.angkotcicaheum_ciwalk();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+                    //----------Step by step Perjalanan Dago ke CIWALK pakai angkot-------------------//
+                    angkotdago_ciwalk: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Dago ke Gedung Sate Bandung menggunakan Angkutan Umum.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari kecamatan kiaracondong ke Halte TMB – PHH Mustafa 01 selama kurang lebih 14 menit, lalu carilah angkutan umum cicaheum – sarijadi menuju sarijadi. Berhenti di Halte ITB, lalu berjalan selama kurang lebih 15 menit ke Ciwalk.  '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //----------Step by step Perjalanan Dago ke CIWALK pakai bus kota-------------------//
+                    bisdago_ciwalk: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Dago ke Gedung Sate Bandung menggunakan Bus Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari kecamatan Buahbatu ke Kantor Pos Processing Center selama kurang lebih 18 menit, lalu carilah angkutan umum ledeng – margahayu menuju ledeng. Berhenti di Halte Cipaganti 1, lalu berjalan selama kurang lebih 9 menit ke Ciwalk. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //-------------- Dago Kategori naik umum atau bus kota----------------------------//
+                    dago_ciwalk: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Mau naik apa anda hari ini?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Bis Kota',
+                                            value: 'bisdago_ciwalk'
+                                        }, {
+                                            text: 'Angkutan Kota',
+                                            value: 'angkot_ciwalk'
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'bisdago_ciwalk':
+                                                this.bisdago_ciwalk();
+                                                break;
+                                            case 'angkot_ciwalk':
+                                                this.angkotdago_ciwalk();
+                                                break;
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+                    //----------Step by step Perjalanan Cikutra ke CIWALK pakai angkot-------------------//
+                    angkotcikutra_ciwalk: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cikutra ke Gedung Sate Bandung menggunakan Angkutan Umum.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari kecamatan cibeunying kidul ke Shelter TMB PHH Mustafa 02 selama kurang lebih 8 menit, lalu carilah angkutan umum cicaheum – sarijadi menuju sarijadi. Berhenti di Halte ITB, lalu berjalan selama kurang lebih 15 menit ke Ciwalk.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //----------Step by step Perjalanan Cikutra ke CIWALK pakai bus kota-------------------//
+                    biscikutra_ciwalk: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cikutra ke Gedung Sate Bandung menggunakan Bus Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari kecamatan Buahbatu ke Kantor Pos Processing Center selama kurang lebih 18 menit, lalu carilah angkutan umum ledeng – margahayu menuju ledeng. Berhenti di Halte Cipaganti 1, lalu berjalan selama kurang lebih 9 menit ke Ciwalk.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //-------------- Cimahi Kategori naik umum atau bus kota----------------------------//
+                    cikutra_ciwalk: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Mau naik apa anda hari ini?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Bis Kota',
+                                            value: 'biscikutra_ciwalk'
+                                        },
+                                        {
+                                            text: 'Angkutan Umum',
+                                            value: 'angkotcikutra_ciwalk'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'biscikutra_ciwalk':
+                                                this.biscikutra_ciwalk();
+                                                break;
+                                            case 'angkotcikutra_ciwalk':
+                                                this.angkotcikutra_ciwalk();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+                    //----------Step by step Perjalanan Buah Batu ke CIWALK pakai angkot-------------------//
+                    angkotbuahbatu_ciwalk: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Buah Batu ke Gedung Sate Bandung menggunakan Angkutan Umum.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari kecamatan Buahbatu ke Kantor Pos Processing Center selama kurang lebih 18 menit, lalu carilah angkutan umum ledeng – margahayu menuju ledeng. Berhenti di Halte Cipaganti 1, lalu berjalan selama kurang lebih 9 menit ke Ciwalk.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //----------Step by step Perjalanan Buah Batu ke CIWALK pakai bus kota-------------------//
+                    bisbuahbatu_ciwalk: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Buah BAtu ke Gedung Sate Bandung menggunakan Bus Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari kecamatan Buahbatu ke Kantor Pos Processing Center selama kurang lebih 18 menit, lalu carilah angkutan umum ledeng – margahayu menuju ledeng. Berhenti di Halte Cipaganti 1, lalu berjalan selama kurang lebih 9 menit ke Ciwalk. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //-------------- Buah Batu Kategori naik umum atau bus kota----------------------------//
+                    buahbatu_ciwalk: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Mau naik apa anda hari ini?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Bis Kota',
+                                            value: 'bisbuahbatu_ciwalk'
+                                        },
+                                        {
+                                            text: 'Angkutan Umum',
+                                            value: 'angkotbuahbatu_ciwalk'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'bisbuahbatu_ciwalk':
+                                                this.bisbuahbatu_ciwalk();
+                                                break;
+                                            case 'angkotbuahbatu_ciwalk':
+                                                this.angkotbuahbatu_ciwalk();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+                    //---------- tempat user menuju ke CIWALK bandung-----------------------//
+                    ciwalk: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Dimana sekarang anda berada?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Cibiru',
+                                            value: 'cibiru_ciwalk'
+                                        },
+                                        {
+                                            text: 'Cicaheum',
+                                            value: 'cicaheum_ciwalk'
+
+                                        },
+                                        {
+                                            text: 'Dago',
+                                            value: 'dago_ciwalk'
+
+                                        },
+                                        {
+                                            text: 'Cikutra',
+                                            value: 'cikutra_ciwalk'
+
+                                        },
+                                        {
+                                            text: 'Buah Batu',
+                                            value: 'buahbatu_ciwalk'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'cibiru_ciwalk':
+                                                this.cibiru_ciwalk();
+                                                break;
+                                            case 'cicaheum_ciwalk':
+                                                this.cicaheum_ciwalk();
+                                                break;
+                                            case 'dago_ciwalk':
+                                                this.dago_ciwalk();
+                                                break;
+                                            case 'cikutra_ciwalk':
+                                                this.cikutra_ciwalk();
+                                                break;
+                                            case 'buahbatu_ciwalk':
+                                                this.buahbatu_ciwalk();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+
+
+
+                    //------------------------------------------ HIBURAN -> BANDUNG ZOO-------------------------------------------- BELUM//
+
+                    //----------Step by step Perjalanan Cibiru ke BANDUNG ZOO pakai angkot-------------------//
+                    angkotcibiru_bandungzoo: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cibiru ke Gedung Sate Bandung menggunakan Angkutan Umum.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari kecamatan Buahbatu ke Kantor Pos Processing Center selama kurang lebih 18 menit, lalu carilah angkutan umum ledeng – margahayu menuju ledeng. Berhenti di Halte TMB – Jl. Jakarta, lalu naik angkutan umum Dipatiukur – Panghegar Permai menuju Dipatiukur. Berhenti di Balubur Town Square. Berjalan selama kurang lebih 14 menit ke Bandung Zoo. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //----------Step by step Perjalanan Cibiru ke BANDUNG ZOO pakai bus kota------------------- //
+                    biscibiru_bandungzoo: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cibiru ke Gedung Sate Bandung menggunakan Bus Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari pusat kecamatan cibiru ke apotek bhakti kencana farma selama kurang lebih 20 menit, lalu carilah bis cibiru – kebon kalapa menuju kebon kalapa. Berhenti di Oyen Ujung Berung, dari sana naiklah bis dari cicaheum - cileunyi menuju cicaheum lalu berhenti di halte TMB Cicaheum. Naiklah bis dari Cicaheum ke Sarijadi menuju Sarijadi. Berhenti di Halte ITB. Berjalan selama kurang lebih 14 menit. Anda tiba di Bandung Zoo. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //-------------- Cibiru Kategori naik umum atau bus kota----------------------------//
+                    cibiru_bandungzoo: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Mau naik apa anda hari ini?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Bis Kota',
+                                            value: 'biscibiru_bandungzoo'
+                                        },
+                                        {
+                                            text: 'Angkutan Umum',
+                                            value: 'angkotcibiru_bandungzoo'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'biscibiru_bandungzoo':
+                                                this.biscibiru_bandungzoo();
+                                                break;
+                                            case 'angkotcibiru_bandungzook':
+                                                this.angkotcibiru_bandungzoo();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+                    //----------Step by step Perjalanan Cicaheum ke BANDUNG ZOO pakai angkot-------------------//
+                    angkotcicaheum_bandungzoo: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cicaheum ke Gedung Sate Bandung menggunakan Angkutan Umum.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari kecamatan kiaracondong ke Halte TMB – PHH Mustafa 01 selama kurang lebih 14 menit, lalu carilah angkutan umum cicaheum – sarijadi menuju sarijadi. Berhenti di Halte ITB, lalu berjalan selama kurang lebih 14 menit ke Bandung Zoo. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //----------Step by step Perjalanan Cicaheum ke BANDUNG ZOO pakai bus kota-------------------//
+                    biscicaheum_bandungzoo: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cicaheum ke Gedung Sate Bandung menggunakan Bus Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari pusat kecamatan cibiru ke apotek bhakti kencana farma selama kurang lebih 20 menit, lalu carilah bis cibiru – kebon kalapa menuju kebon kalapa. Berhenti di Oyen Ujung Berung, dari sana naiklah bis dari cicaheum - cileunyi menuju cicaheum lalu berhenti di halte TMB Cicaheum. Naiklah bis dari Cicaheum ke Sarijadi menuju Sarijadi. Berhenti di Halte ITB. Berjalan selama kurang lebih 14 menit. Anda tiba di Bandung Zoo. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //-------------- Cicaheum Kategori naik umum atau bus kota----------------------------//
+                    cicaheum_bandungzoo: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Mau naik apa anda hari ini?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Bis Kota',
+                                            value: 'biscicaheum_bandungzoo'
+                                        },
+                                        {
+                                            text: 'Angkutan Umum',
+                                            value: 'angkotcicaheum_bandungzoo'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'biscicaheum_bandungzoo':
+                                                this.biscicaheum_bandungzoo();
+                                                break;
+                                            case 'angkotcicaheum_bandungzoo':
+                                                this.angkotcicaheum_bandungzoo();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+                    //----------Step by step Perjalanan Dago ke BANDUNG ZOO pakai angkot-------------------//
+                    angkotdago_bandungzoo: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Dago ke Gedung Sate Bandung menggunakan Angkutan Umum.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari kecamatan coblong ke Pasar Simpang Dago selama kurang lebih 9 menit, lalu carilah angkutan umum Caringin – Sadang Serang menuju Caringin. Berhenti di Halte Tamansari ITB, lalu Anda tiba di Bandung Zoo. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //----------Step by step Perjalanan Dago ke BANDUNG ZOO pakai bus kota-------------------//
+                    bisdago_bandungzoo: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Dago ke Gedung Sate Bandung menggunakan Bus Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari kecamatan coblong ke Pasar Simpang Dago selama kurang lebih 9 menit, lalu carilah angkutan umum Caringin – Sadang Serang menuju Caringin. Berhenti di Halte Tamansari ITB, lalu Anda tiba di Bandung Zoo. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //-------------- Dago Kategori naik umum atau bus kota----------------------------//
+                    dago_bandungzoo: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Mau naik apa anda hari ini?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Bis Kota',
+                                            value: 'bisdago_bandungzoo'
+                                        }, {
+                                            text: 'Angkutan Kota',
+                                            value: 'angkot_bandungzoo'
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'bisdago_bandungzoo':
+                                                this.bisdago_bandungzoo();
+                                                break;
+                                            case 'angkot_bandungzoo':
+                                                this.angkotdago_bandungzoo();
+                                                break;
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+                    //----------Step by step Perjalanan Cikutra ke BANDUNG ZOO pakai angkot-------------------//
+                    angkotcikutra_bandungzoo: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cikutra ke Gedung Sate Bandung menggunakan Angkutan Umum.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari kecamatan cibeunying kidul ke Shelter TMB PHH Mustafa 02 selama kurang lebih 8 menit, lalu carilah angkutan umum cicaheum – sarijadi menuju sarijadi. Berhenti di Halte ITB, lalu berjalan selama kurang lebih 14 menit ke Bandung Zoo.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //----------Step by step Perjalanan Cikutra ke BANDUNG ZOO pakai bus kota-------------------//
+                    biscikutra_bandungzoo: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Cikutra ke Gedung Sate Bandung menggunakan Bus Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari kecamatan cibeunying kidul ke Shelter TMB PHH Mustafa 02 selama kurang lebih 8 menit, lalu carilah bis cicaheum – sarijadi menuju sarijadi. Berhenti di Halte ITB, lalu berjalan selama kurang lebih 14 menit ke Bandung Zoo.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //-------------- CIkutra Kategori naik umum atau bus kota----------------------------//
+                    cikutra_bandungzoo: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Mau naik apa anda hari ini?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Bis Kota',
+                                            value: 'biscikutra_bandungzoo'
+                                        },
+                                        {
+                                            text: 'Angkutan Umum',
+                                            value: 'angkotcikutra_bandungzoo'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'biscikutra_bandungzoo':
+                                                this.biscikutra_bandungzoo();
+                                                break;
+                                            case 'angkotcikutra_bandungzoo':
+                                                this.angkotcikutra_bandungzoo();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+                    //----------Step by step Perjalanan Buah Batu ke BANDUNG ZOO pakai angkot-------------------//
+                    angkotbuahbatu_bandungzoo: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Buah Batu ke Gedung Sate Bandung menggunakan Angkutan Umum.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari kecamatan Buahbatu ke Kantor Pos Processing Center selama kurang lebih 18 menit, lalu carilah angkutan umum ledeng – margahayu menuju ledeng. Berhenti di Halte TMB – Jl. Jakarta, lalu naik angkutan umum Dipatiukur – Panghegar Permai menuju Dipatiukur. Berhenti di Balubur Town Square. Berjalan selama kurang lebih 14 menit ke Bandung Zoo.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //----------Step by step Perjalanan Buah Batu ke BANDUNG ZOO pakai bus kota-------------------//
+                    bisbuahbatu_bandungzoo: function () {
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Ini adalah step-by-step naik bis dari Buah BAtu ke Gedung Sate Bandung menggunakan Bus Kota Bandung.'
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Berjalan dari kecamatan Buahbatu ke Kantor Pos Processing Center selama kurang lebih 18 menit, lalu carilah angkutan umum ledeng – margahayu menuju ledeng. Berhenti di Halte TMB – Jl. Jakarta, lalu naik angkutan umum Dipatiukur – Panghegar Permai menuju Dipatiukur. Berhenti di Balubur Town Square. Berjalan selama kurang lebih 14 menit ke Bandung Zoo. '
+
+                        })
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Terima Kasih sudah menggunakan layanan gratis kami. <br> Dukung kami untuk membantu para pendatang dengan menambahakan spot-spot terbaru agar tidak tersesat :)'
+
+                        })
+
+
+                    },
+
+                    //-------------- Buah Batu Kategori naik umum atau bus kota----------------------------//
+                    buahbatu_bandungzoo: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Mau naik apa anda hari ini?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Bis Kota',
+                                            value: 'bisbuahbatu_bandungzoo'
+                                        },
+                                        {
+                                            text: 'Angkutan Umum',
+                                            value: 'angkotbuahbatu_bandungzoo'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'bisbuahbatu_bandungzoo':
+                                                this.bisbuahbatu_bandungzoo();
+                                                break;
+                                            case 'angkotbuahbatu_bandungzoo':
+                                                this.angkotbuahbatu_bandungzoo();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
+
+
+                    //---------- tempat user menuju ke BANDUNG ZOO bandung-----------------------//
+                    bandungzoo: function () {
+
+                        this.botui.message.add({
+                            delay: 200,
+                            loading: true,
+                            content: 'Dimana sekarang anda berada?'
+
+                        })
+
+                            .then(() => {
+                                return this.botui.action.button({
+
+                                    delay: 1000,
+                                    action: [
+                                        {
+                                            text: 'Cibiru',
+                                            value: 'cibiru_bandungzoo'
+                                        },
+                                        {
+                                            text: 'Cicaheum',
+                                            value: 'cicaheum_bandungzoo'
+
+                                        },
+                                        {
+                                            text: 'Dago',
+                                            value: 'dago_bandungzoo'
+
+                                        },
+                                        {
+                                            text: 'Cikutra',
+                                            value: 'cikutra_bandungzoo'
+
+                                        },
+                                        {
+                                            text: 'Buah Batu',
+                                            value: 'buahbatu_bandungzoo'
+
+                                        },
+                                    ]
+
+                                });
+                            })
+
+                            .then(res => {
+                                this.botui.message
+                                    .bot({
+                                        delay: 200,
+                                        loading: true
+                                    })
+
+                                    .then(index => {
+                                        this.loadingIndex = index;
+
+                                        switch (res.value) {
+                                            case 'cibiru_bandungzoo':
+                                                this.cibiru_bandungzoo();
+                                                break;
+                                            case 'cicaheum_bandungzoo':
+                                                this.cicaheum_bandungzoo();
+                                                break;
+                                            case 'dago_bandungzoo':
+                                                this.dago_bandungzoo();
+                                                break;
+                                            case 'cikutra_bandungzoo':
+                                                this.cikutra_bandungzoo();
+                                                break;
+                                            case 'buahbatu_bandungzoo':
+                                                this.buahbatu_bandungzoo();
+                                                break;
+
+                                            default:
+
+                                        }
+                                    });
+
+                            });
+
+
+
+
+                    },
 
 
 
