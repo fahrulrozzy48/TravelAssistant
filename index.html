@@ -3261,12 +3261,12 @@
 
 
                     },
-                    hiburan: function () {
+                    wisata: function () {
 
                         this.botui.message.add({
                             delay: 200,
                             loading: true,
-                            content: 'Inilah 5 tempat yang sering dikunjungi oleh masyarakat Bandung. Silahkan pilih :'
+                            content: 'Inilah 5 tempat wisata yang sering dikunjungi oleh masyarakat Bandung. Silahkan pilih :'
 
                         })
                             .then(() => {
@@ -3338,47 +3338,6 @@
                             });
 
                     },
-                    sekolah: function () {
-                        this.botui.message.add({
-                            delay: 200,
-                            loading: true,
-                            content: 'Jeung naon sakola? DPR geus aya. <br> Gawe weh terus, beunghar henteu!! <br> Mending mulung'
-                        })
-
-
-
-                    },
-                    wisata: function () {
-                        this.botui.message.add({
-                            delay: 200,
-                            loading: true,
-                            content: 'Wisata? boga duit ti mana maneh? <br> Maen Mobel lejen oge menta hotspot ka batur'
-                        })
-
-
-
-                    },
-                    kuliner: function () {
-                        this.botui.message.add({
-                            delay: 200,
-                            loading: true,
-                            content: 'Rek dahar naon maneh? <br> Sangu jeng kecap ge geus alhamdulillah'
-                        })
-
-
-
-                    },
-                    olahraga: function () {
-                        this.botui.message.add({
-                            delay: 200,
-                            loading: true,
-                            content: 'Olahraga kamana? mandi oge tara maneh mah'
-                        })
-
-
-
-                    },
-
 
 
 
@@ -3433,33 +3392,15 @@
                                     delay: 1000,
                                     action: [
                                         {
-                                            text: 'Hiburan',
-                                            value: 'hiburan'
+                                            text: 'Wisata',
+                                            value: 'wisata'
                                         },
                                         {
                                             text: 'Nonton',
                                             value: 'nonton'
 
                                         },
-                                        {
-                                            text: 'Sekolah/Kuliah',
-                                            value: 'sekolah'
-
-                                        },
-                                        {
-                                            text: 'Wisata',
-                                            value: 'wisata'
-
-                                        },
-                                        {
-                                            text: 'Olahraga',
-                                            value: 'olahraga'
-
-                                        },
-                                        {
-                                            text: 'Kuliner',
-                                            value: 'kuliner'
-                                        },
+                                        
                                     ]
 
                                 });
@@ -3481,23 +3422,11 @@
                                         this.loadingIndex = index;
 
                                         switch (res.value) {
-                                            case 'hiburan':
-                                                this.hiburan();
-                                                break;
-                                            case 'nonton':
-                                                this.nonton();
-                                                break;
-                                            case 'sekolah':
-                                                this.sekolah();
-                                                break;
                                             case 'wisata':
                                                 this.wisata();
                                                 break;
-                                            case 'olahraga':
-                                                this.olahraga();
-                                                break;
-                                            case 'kuliner':
-                                                this.kuliner();
+                                            case 'nonton':
+                                                this.nonton();
                                                 break;
 
                                             default:
